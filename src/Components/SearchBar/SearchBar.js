@@ -10,7 +10,7 @@ import './SearchBar.css';
    }
 
    handleTermChange(event) {
-     this.props.onTermChange(event.target.value);
+     this.setState({term: event.target.value});
    }
 
    search () {
@@ -21,7 +21,7 @@ import './SearchBar.css';
      return (
        <div className="SearchBar">
          <input placeholder="Enter A Song, Album, or Artist" onChange={this.handleTermChange}/>
-         <a>SEARCH</a>
+         <a onClick={this.search}>SEARCH</a>
        </div>
      )
    }
