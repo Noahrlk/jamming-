@@ -41,7 +41,7 @@ const Spotify = {
              console.log('Reaqust failed')
          }
      }).then(jsonresponse => {
-         if(!jsonresponse.tracks) {
+         if(!jsonresponse.Track) {
            return [];
          }
      return jsonresponse.tracks.items.map(track => ({
